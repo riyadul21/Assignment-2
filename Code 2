@@ -36,6 +36,6 @@ def Request_Input(playern):
 Player1name = Request_Input(1)
 Player2name = Request_Input(2)
 
-print(Player1name)
-print(Player2name)
+print("Hi",Player1name,"you are ''")
+print("Hi", Player2name, "you are @@")
 
