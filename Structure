@@ -1,0 +1,80 @@
+### Code Structure
+
+Global
+Player1 =” , Player 2=”;
+
+Def Menu()
+
+1 = New Game
+2 = Restore Game
+3 = Quit
+
+End_Def
+Def Request_Input(Player)
+Input()
+Validate(player)
+Return Input()
+End_Def
+
+Def Request_Players_Name
+Global Player1, Player 2;
+Player 1 = Request_Input(1)
+Player 2 + Request_Input(2)
+Confirm Player Name against symbol
+END_DEF
+
+Def Default_Header()
+Print “Number of Tokens for player $Player 1 ‘ ‘:”
+Print “Number of Tokens for player $Player 2 ‘ ‘:”
+END_DEF
+
+Def New_Game
+Request_Players_Name
+Default_Header
+Default_Board() Create board in memory
+Defaul_Footer()
+Game_In_Play
+END DEF
+
+Def Game_In_Play
+Loop While Game = True
+Player Goes 
+UpdateMemoryLocations()
+GetPlayerTokens(1)
+GetPlayerTokens(2)
+ClearScreen()
+Header()
+Board()
+Footer()
+Winner()
+Do you want to quit? Y Save Current game()
+END_DEF
+
+DEF SaveCurrectGame()
+Save the player name which player is which symbol
+Save Status (Whom is to play)
+Save Tokens remaining
+Save Board
+Look at weeks 20&21
+END_DEF
+
+DEF UpdateMemoryLocations(Which_player_is_playing)
+Look_North()    row-1    loop check      loop updatememory
+Look_North_East()  row -1   col+1 
+Look_East()         col+1
+Look_South_East  row+1    col+1
+Look South    row+1
+Look_South_West() row+1 col-1
+Look_West() col-1
+Look_North_West row -1 col -1
+END_DEF
+
+Def RestoreGame()
+Read the player name which player is which symbol
+Read Status (Whom is to play)
+Read Tokens remaining
+Read Board
+END Def
+
+Def Quit()
+END_DEF
