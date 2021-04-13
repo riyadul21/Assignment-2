@@ -1,5 +1,4 @@
-#Riyadul Islam game
-
+# Riyadul Islam game
 
 
 def Menu():
@@ -12,20 +11,31 @@ def Menu():
     "\n"
     "\n"
     "Select a number from the menu"))
-    Menu()
 
-while User_Option <=0 or User_Option >=4:
+
+    if User_Option <=0 or User_Option >=4:
           print("Input not recognised, please try again...")
-          Menu()
 
-if User_Option == 1:
-       Player_One = input("Insert the first player name")
-       Player_Two = input("Insert the second player name")
-if Player_One + Player_Two == "" :
-       print("No name added")
-       Menu()
+Menu()
 
-else:
-    print ("hi" 'Player_One' "you are ''")
-    print ("hi" 'Player_Two' "you are @@")
-    Menu()
+player1name=''
+player2name=''
+
+def Request_Input(playern):
+    player = input("Please enter players name")
+    if playern == 1:
+       while len(player)==0:
+             player = input("Please enter players name")
+       return player
+    else:
+         while len(player)==0:
+          player = input("Please enter players name")
+         return player
+
+
+Player1name = Request_Input(1)
+Player2name = Request_Input(2)
+
+print(Player1name)
+print(Player2name)
+
