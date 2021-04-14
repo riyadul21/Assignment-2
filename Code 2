@@ -1,6 +1,7 @@
 # Riyadul Islam game
 
 
+
 def Menu():
 
     User_Option = int(input("Menu\n"
@@ -39,3 +40,39 @@ Player2name = Request_Input(2)
 print("Hi",Player1name,"you are ''")
 print("Hi", Player2name, "you are @@")
 
+
+def Default_Header():
+    print ("Number of Tokens for player" + player1name +" '':")
+    print ("Number of Tokens for player" + player2name +" @@:")
+
+Default_Header()
+
+board=[]
+
+def DisplayBoard(board):
+   number=-1
+   for row in range(1,9):
+      for col in range(1,9):
+         number+=1
+         print(" ",board[number], sep=' ',end='')
+      print()
+
+def CreateBoardSelection(board):
+    size = 64
+    for index in range(1,65):
+        if index<10:
+               number="0"+str(index)
+        else:
+             number = str(index)
+        board.append(number)
+    return board
+
+
+CreateBoardSelection(board)
+##print(board)
+DisplayBoard(board)
+
+def Footer():
+    print(Player1name, "turn, please select one number from the board")
+
+Footer()
